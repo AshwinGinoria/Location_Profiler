@@ -25,7 +25,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.497"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/VolumeUP"/>
+            app:layout_constraintTop_toBottomOf="@+id/VolumeUP" android:layout_marginTop="12dp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Silent"
+            android:text="Silent"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/VolumeDown" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.498"/>
+    <Button
+            android:id="@+id/MaxVol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max Volume"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/Silent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

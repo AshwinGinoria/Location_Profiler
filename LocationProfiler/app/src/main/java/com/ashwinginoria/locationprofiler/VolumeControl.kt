@@ -24,6 +24,14 @@ class VolumeControl : AppCompatActivity() {
             val currentVolume = audioManager.getStreamVolume(3)
             if (currentVolume != 0) audioManager.setStreamVolume(3, currentVolume - 1, 2)
         }
+        MaxVol.setOnClickListener {
+            val maxVolume = audioManager.getStreamMaxVolume( 3 )
+            val currentVolume = audioManager.getStreamVolume( 3 )
+            audioManager.setStreamVolume(3, maxVolume, 1)
+        }
+        Silent.setOnClickListener {
+            audioManager.setStreamVolume(3, 0, 1)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
