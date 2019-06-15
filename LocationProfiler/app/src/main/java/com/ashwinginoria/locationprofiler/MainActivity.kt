@@ -1,9 +1,11 @@
 package com.ashwinginoria.locationprofiler
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.material.snackbar.Snackbar
 
@@ -19,6 +21,16 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+    }
+
+    fun gotoVolumeActivity(view: View) {
+        val intent = Intent(this, VolumeControl::class.java).apply {}
+        startActivity(intent)
+    }
+
+    fun gotoLocationActivity(view: View) {
+        val intent = Intent(this, Set_Location::class.java).apply {}
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

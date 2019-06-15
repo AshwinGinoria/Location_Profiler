@@ -1,7 +1,6 @@
 package com.ashwinginoria.locationprofiler
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
@@ -16,21 +15,21 @@ class VolumeControl : AppCompatActivity() {
 
         val audioManager: AudioManager = getSystemService(AUDIO_SERVICE) as AudioManager
         VolumeUP.setOnClickListener {
-            val maxVolume = audioManager.getStreamMaxVolume( 3 )
-            val currentVolume = audioManager.getStreamVolume( 3 )
-            if (currentVolume != maxVolume) audioManager.setStreamVolume(3, currentVolume+1, 2)
+            val maxVolume = audioManager.getStreamMaxVolume( AudioManager.STREAM_MUSIC )
+            val currentVolume = audioManager.getStreamVolume( AudioManager.STREAM_MUSIC )
+            if (currentVolume != maxVolume) audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume+1, 1)
         }
         VolumeDown.setOnClickListener {
-            val currentVolume = audioManager.getStreamVolume(3)
-            if (currentVolume != 0) audioManager.setStreamVolume(3, currentVolume - 1, 2)
+            val currentVolume = audioManager.getStreamVolume( AudioManager.STREAM_MUSIC )
+            if (currentVolume != 0) audioManager.setStreamVolume( AudioManager.STREAM_MUSIC, currentVolume - 1, 1)
         }
         MaxVol.setOnClickListener {
-            val maxVolume = audioManager.getStreamMaxVolume( 3 )
-            val currentVolume = audioManager.getStreamVolume( 3 )
-            audioManager.setStreamVolume(3, maxVolume, 1)
+            val maxVolume = audioManager.getStreamMaxVolume( AudioManager.STREAM_MUSIC )
+            val currentVolume = audioManager.getStreamVolume( AudioManager.STREAM_MUSIC )
+            audioManager.setStreamVolume( AudioManager.STREAM_MUSIC, maxVolume, 1)
         }
         Silent.setOnClickListener {
-            audioManager.setStreamVolume(3, 0, 1)
+            audioManager.setStreamVolume( AudioManager.STREAM_MUSIC, 0, 1)
         }
     }
 
