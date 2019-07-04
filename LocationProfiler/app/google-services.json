@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "678977358759",
+    "firebase_url": "https://locationprofiler.firebaseio.com",
+    "project_id": "locationprofiler",
+    "storage_bucket": "locationprofiler.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678977358759:android:2a8c33aaff39f390",
+        "android_client_info": {
+          "package_name": "com.ashwinginoria.locationprofiler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678977358759-riufs2fgjva9jspi2h9mrp89c4gnf192.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcQFtBsCJsA8Kyf-Ri8YhSVvtHamHUT1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678977358759-riufs2fgjva9jspi2h9mrp89c4gnf192.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

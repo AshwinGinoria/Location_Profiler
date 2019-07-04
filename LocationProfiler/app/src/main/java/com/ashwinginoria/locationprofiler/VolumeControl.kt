@@ -15,21 +15,25 @@ class VolumeControl : AppCompatActivity() {
 
         val audioManager: AudioManager = getSystemService(AUDIO_SERVICE) as AudioManager
         VolumeUP.setOnClickListener {
-            val maxVolume = audioManager.getStreamMaxVolume( AudioManager.STREAM_MUSIC )
-            val currentVolume = audioManager.getStreamVolume( AudioManager.STREAM_MUSIC )
-            if (currentVolume != maxVolume) audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume+1, 1)
+            val maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
+            val currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
+            if (currentVolume != maxVolume) audioManager.setStreamVolume(
+                AudioManager.STREAM_MUSIC,
+                currentVolume + 1,
+                1
+            )
         }
         VolumeDown.setOnClickListener {
-            val currentVolume = audioManager.getStreamVolume( AudioManager.STREAM_MUSIC )
-            if (currentVolume != 0) audioManager.setStreamVolume( AudioManager.STREAM_MUSIC, currentVolume - 1, 1)
+            val currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
+            if (currentVolume != 0) audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume - 1, 1)
         }
         MaxVol.setOnClickListener {
-            val maxVolume = audioManager.getStreamMaxVolume( AudioManager.STREAM_MUSIC )
-            val currentVolume = audioManager.getStreamVolume( AudioManager.STREAM_MUSIC )
-            audioManager.setStreamVolume( AudioManager.STREAM_MUSIC, maxVolume, 1)
+            val maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
+            val currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
+            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, maxVolume, 1)
         }
         Silent.setOnClickListener {
-            audioManager.setStreamVolume( AudioManager.STREAM_MUSIC, 0, 1)
+            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 1)
         }
     }
 
